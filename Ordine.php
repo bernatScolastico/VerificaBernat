@@ -16,4 +16,12 @@ class Ordine implements JsonSerializable{
     public function addArticolo($articolo){
         array_push($this->articoli_venduti, $articolo);
     }
+
+    public function jsonSerialize(){
+        return[
+            'numero_ordine' => $this->numero_ordine,
+            'data' => $this->data,
+            'importo_totale' => $this->importo_totale,
+        ];
+    }
 }

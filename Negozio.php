@@ -22,12 +22,12 @@ class Negozio implements JsonSerializable{
     }
 
     public function jsonSerialize(){
-        return{
+        return[
             'nome' => $this->nome,
             'telefono' => $this->telefono,
             'indirizzo' => $this->indirizzo,
             'url' => $this->url,
             'partita IVA' => $this->p_iva
-        };
+        ];
     }
 }
